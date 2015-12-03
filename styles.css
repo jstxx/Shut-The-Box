@@ -1,0 +1,146 @@
+h1, .tiles {
+    text-align:center
+}
+.tile {
+    padding:20px;
+    transform:rotateX(0deg);
+    -webkit-transform:rotateX(0deg);
+    transition: all .24s;
+    -webkit-transition: all .24s;
+}
+.playerscore {
+    font-size:2em;
+    text-align:center;
+}
+.rolltext {
+    font-size:2em;
+    color:blue;
+    font-weight:bold
+}
+#dice1 {
+    font-size:2em;
+    vertical-align:middle;
+    border:1px solid black;
+    height:50px;
+    width:50px;
+    background:url('http://i.imgur.com/dkaBmQf.png');
+    background-size:cover;
+}
+#dice2 {
+    font-size:2em;
+    vertical-align:middle;
+    border:1px solid black;
+    height:50px;
+    width:50px;
+    background:url('http://i.imgur.com/dkaBmQf.png');
+    background-size:cover;
+}
+#dice1label, #dice2label {
+    position:relative;
+    top:1.42em;
+    left:18px;
+    font-size:2em;
+}
+.spacer {
+    height:30px;
+}
+.fold {
+    transform:rotateX(50deg);
+    -webkit-transform:rotateX(50deg);
+    transition: all .24s;
+    -webkit-transition: all .24s;
+}
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.tileholder {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index:1;
+}
+.tilenumber {
+    position:relative;
+    top:45px;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    z-index:2
+}
+.flexH {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
