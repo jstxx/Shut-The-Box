@@ -53,6 +53,16 @@ var validSuperSets = [
     return false;
 }
 
+var ScoreDisplay = function(toggle) {
+    var el = document.getElementById('score-holder')
+
+    if(toggle =='show'){
+        el.classList.remove('hidden');
+    }
+    else
+    el.classList.add('hidden');
+}
+
 var rollBothDice = function (e) {
     disable(e.target.id);
     enable('endturn');
@@ -62,7 +72,6 @@ var rollBothDice = function (e) {
     var outcome2 = randomOutcome(1, 6);
     diceSum = sumDice(outcome, outcome2);
     setCurrentRoll(diceSum);
-
     clearBackground('dice1');
     clearBackground('dice2');
     setDieOneLabel(outcome);
@@ -103,6 +112,7 @@ var endTurn = function () {
     var sumSelectedTiles = sumArray(selectedThisTurnTiles);
 
     if (sumSelectedTiles == diceSum) {
+        ScoreDisplay('show');
         reEnableSingleDiceIfAllowed();
         MoveTempClosedTilesToClosedTiles();
         UpdateTurnCount();
@@ -151,6 +161,8 @@ var checkWin = function () {
         alert('congrats! you win');
     } else {
         alert('sorry you lost with a score of: ' + total);
+        ScoreDisplay('hide');
+
     }
 }
 
@@ -217,11 +229,13 @@ var enableAllOpenTiles = function () {
     }
 
     function unfold(elementId) {
-        document.getElementById(elementId).classList.remove('fold');
+        document.getElementById(elementId).parentNode.parentNode.classList.remove('fold');
+     //   document.getElementById(elementId).classList.remove('fold');
     }
 
     function fold(elementId) {
-        document.getElementById(elementId).classList.add('fold');
+        document.getElementById(elementId).parentNode.parentNode.classList.add('fold');
+     //   document.getElementById(elementId).classList.add('fold');
     }
 
     //Set html element values
@@ -253,7 +267,7 @@ var enableAllOpenTiles = function () {
 var init = function () {
     UpdateTurnCount();
     openTiles = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+    ScoreDisplay('hide');
     var el = document.getElementById("dice1");
     el.addEventListener("click", rollSingleDie, false);
 
