@@ -36,18 +36,20 @@ var validSuperSets = [
 ];
     //test for valid sums
     var validSets = validSuperSets[number];
-    for (var i = 0; i < validSets.length; i++) {
-        var set = validSets[i];
-        var foundAll = true;
-        for (var j = 0; j < set.length; j++) {
-            if (openTiles.indexOf(set[j]) == -1) {
-                console.log(set[j]);
-                foundAll = false;
-                break;
+    if(validSets!==undefined) {
+        for (var i = 0; i < validSets.length; i++) {
+            var set = validSets[i];
+            var foundAll = true;
+            for (var j = 0; j < set.length; j++) {
+                if (openTiles.indexOf(set[j]) == -1) {
+                    console.log(set[j]);
+                    foundAll = false;
+                    break;
+                }
             }
-        }
-        if (foundAll) {
-            return true;
+            if (foundAll) {
+                return true;
+            }
         }
     }
     return false;
